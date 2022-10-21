@@ -71,13 +71,13 @@ typedef unsigned short int ui16;
 // Decrease QLZ_POINTERS for level 3 to increase compression speed. Do not touch any other values!
 #if QLZ_COMPRESSION_LEVEL == 1
 #define QLZ_POINTERS 1
-#define QLZ_HASH_VALUES 4096
+#define QLZ_HASH_VALUES 128
 #elif QLZ_COMPRESSION_LEVEL == 2
-#define QLZ_POINTERS 4
-#define QLZ_HASH_VALUES 2048
+#define QLZ_POINTERS 1
+#define QLZ_HASH_VALUES 128
 #elif QLZ_COMPRESSION_LEVEL == 3
-#define QLZ_POINTERS 16
-#define QLZ_HASH_VALUES 4096
+#define QLZ_POINTERS 1
+#define QLZ_HASH_VALUES 128
 #endif
 
 // Detect if pointer size is 64-bit. It's not fatal if some 64-bit target is not detected because this is only for adding an optional 64-bit optimization.
